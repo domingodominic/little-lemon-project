@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+/* body {
+  margin-left: 2rem;
+  margin-right: 2rem;
+} */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  flex: 1;
+  max-height: 100px;
+}
+nav {
+  padding: 30px 20px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 3rem;
+}
+
+li a {
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: black;
+}
+li a::before {
+  position: absolute;
+  top: 2rem;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: rgb(180, 171, 0);
+}
+
+li a:hover::before {
+  transition: 0.3s linear;
+  width: 100%;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 2rem;
+}
+section:nth-child(1) {
+  background-color: rgb(131, 138, 109);
+}
+section:nth-child(2) article {
+  height: fit-content;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+article {
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+}
+article button {
+  padding: 10px 15px;
+  border: none;
+  background-color: rgb(180, 171, 0);
+  color: white;
+  font-size: 15px;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+article button:hover {
+  border: 2px solid rgb(180, 171, 0);
+  background: transparent;
+  color: black;
+}
+.deals--offer {
+  border: none;
+}
+article p {
+  line-height: 1.5rem;
+}
+/* article:nth-child(2) {
+  border-left: 2px solid gray;
+  border-right: 2px solid gray;
+} */
+article h2 {
+  color: rgb(180, 171, 0);
+  font-size: 2.5rem;
+}
+p::first-letter {
+  font-size: 3rem;
+}
+p {
+  padding: 20px;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: rgb(180, 171, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(1) p {
+  font-size: 20px;
+  line-height: 3rem;
+}
+section:nth-child(2) article {
+  border-radius: 20px;
+  box-shadow: 7px 7px 14px #8d8d8d, -7px -7px 14px #ffffff;
+}
+div {
+  text-align: center;
+  flex: 1;
+}
+.footer--logo img {
+  max-height: 100px;
+}
+article h1 {
+  position: relative;
+  font-size: 3rem;
+  text-shadow: 0px 0px 20px rgba(151, 151, 151, 0.6);
+  color: rgb(180, 171, 0);
+}
+h1 ~ p {
+  padding: 10px 20px;
+  color: rgb(240, 240, 240);
+}
+h1::after {
+  content: "";
+  background-image: url("./images/pricetags.png");
+  position: absolute;
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+}
+footer div:nth-child(2) {
+  border-left: 1px solid rgb(0, 0, 0);
+}
+
+@media (max-width: 500px) {
+  section {
+    display: block;
+  }
+  article:nth-child(2) {
+    border: none;
+    margin: 20px 0px 20px 0px;
+  }
+  nav {
+    padding: 0;
+    text-align: center;
+  }
+
+  ul {
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .logo img {
+    max-width: 300px;
+  }
+  .footer--logo img {
+    max-height: 60px;
+  }
+}
